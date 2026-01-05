@@ -17,53 +17,63 @@ export function Sidebar({ children }: { children?: React.ReactNode }) {
   return (
     <Sheet>
       {children}
-      <SheetContent side="left" className="bg-white/10 backdrop-blur-sm rounded-tr-4xl rounded-br-4xl  border border-white/20">
+      <SheetContent
+        side="left"
+        className="bg-white/10 backdrop-blur-sm rounded-tr-4xl rounded-br-4xl  border border-white/20"
+      >
         <SheetHeader>
           <SheetTitle className="text-white">Menu</SheetTitle>
-          <SheetDescription>
-            
-          </SheetDescription>
+          <SheetDescription></SheetDescription>
         </SheetHeader>
         <div className="grid flex-1 auto-rows-min gap-6 px-4">
           <div className="grid gap-3">
-            <Button
-              asChild
-              className="bg-neutral-500 hover:scale-105 text-white rounded-full px-6 py-3"
-            >
-              <Link href="/login">Reference</Link>
-            </Button>
+            <Link href="/References">
+              <Button className="bg-white/15 opacity-90  hover:scale-105 text-white rounded-full w-85 h-13">
+                References
+              </Button>
+            </Link>
           </div>
           <div className="grid gap-3">
-            <Button
-              asChild
-              className="bg-neutral-500 hover:scale-105 text-white rounded-full px-6 py-3"
-            >
-              <Link href="/login">About Us</Link>
-            </Button>
+            <Link href="/About">
+              <Button className="bg-white/15 opacity-90  hover:scale-105 text-white rounded-full w-85 h-13">
+                About
+              </Button>
+            </Link>
           </div>
           <div className="grid gap-3">
-            <Button
-              asChild
-              className="bg-neutral-500 hover:scale-105 text-white rounded-full px-6 py-3"
-            >
-              <Link  href="/login">Support</Link>
-            </Button>
+            <Link href="/Support">
+              <Button className="bg-white/15 opacity-90  hover:scale-105 text-white rounded-full w-85 h-13">
+                Support
+              </Button>
+            </Link>
           </div>
           <div className="grid gap-3">
-            <Button
-              asChild
-              className="bg-neutral-500 hover:scale-105 text-white rounded-full px-6 py-3"
-            >
-              <Link href="/login">Communication</Link>
-            </Button>
+            <Link href="/Contact">
+              <Button className="bg-white/15 opacity-90  hover:scale-105 text-white rounded-full w-85 h-13">
+                Contact
+              </Button>
+            </Link>
           </div>
-          
         </div>
+
         <SheetFooter>
-          <Button type="submit">Save changes</Button>
-          <SheetClose asChild>
-            <Button variant="outline">Close</Button>
-          </SheetClose>
+          <div className="flex justify-between mb-10">
+            <Link href="/Contact">
+              <Button className="bg-white/15 opacity-90  hover:scale-105 text-white rounded-full w-25 h-13">
+                Instagram
+              </Button>
+            </Link>
+            <Link href="/Contact">
+              <Button className="bg-white/15 opacity-90  hover:scale-105 text-white rounded-full w-25 h-13">
+                WhatsApp
+              </Button>
+            </Link>
+            <Link href="/Contact">
+              <Button className="bg-white/15 opacity-90  hover:scale-105 text-white rounded-full w-25 h-13">
+                Behance
+              </Button>
+            </Link>
+          </div>
         </SheetFooter>
       </SheetContent>
     </Sheet>

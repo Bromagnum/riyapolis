@@ -29,41 +29,36 @@ export default function RightSidebar({
         <SheetHeader>
           <SheetTitle className="text-white">Membership</SheetTitle>
         </SheetHeader>
-        <div className="grid gap-3">
-            <Button
-              asChild
-              className="bg-neutral-500 hover:scale-105 text-white rounded-full px-6 py-3"
-            >
-              <Link href="/login">Reference</Link>
+        <div className="grid grid-cols-2 justify-between">
+          <div className="grid gap-3">
+            <Button className="bg-white/15 opacity-90  hover:scale-105 text-white rounded-full w-45 h-13 ml-1.5">
+              Login
             </Button>
           </div>
           <div className="grid gap-3">
-            <Button
-              asChild
-              className="bg-neutral-500 hover:scale-105 text-white rounded-full px-6 py-3"
-            >
-              <Link href="/login">Reference</Link>
+            <Button className="bg-white/15 opacity-90  hover:scale-105 text-white rounded-full w-45 h-13">
+              Register
             </Button>
-          </div>
-        <div className="grid  text-white auto-rows-min gap-6 px-4">
-          
-          <div className="grid gap-3">
-            <Label htmlFor="sheet-demo-name">Name</Label>
-            <Input id="sheet-demo-name" defaultValue="Pedro Duarte" />
-          </div>
-          <div className="grid gap-3">
-            <Label htmlFor="sheet-demo-username">Username</Label>
-            <Input id="sheet-demo-username" defaultValue="@peduarte" />
           </div>
         </div>
-        <SheetFooter>
-          <Button type="submit" className="bg-white/10 backdrop-blur-sm">
+        <div className="grid  text-white auto-rows-min gap-6 px-4">
+          <div className="grid gap-3">
+            <Label htmlFor="name">Name</Label>
+            <Input id="name" defaultValue="Pedro Duarte" />
+          </div>
+          <div className="grid gap-3">
+            <Label htmlFor="email">Email</Label>
+            <Input id="email" defaultValue="@peduarte" />
+          </div>
+        </div>
+        <div>
+          <SheetFooter>
+          <Button type="submit" className="bg-white/15 opacity-90">
             Continue
           </Button>
-          <SheetClose asChild>
-            <Button variant="outline">Close</Button>
-          </SheetClose>
+          
         </SheetFooter>
+        </div>
       </SheetContent>
     </Sheet>
   );
